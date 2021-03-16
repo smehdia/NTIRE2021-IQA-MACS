@@ -20,8 +20,24 @@ Set datasets directories in [`create_data_pieapp_tid.py`](./prepare_dataset/crea
 Set PIPAL dataset directory in [`create_data_pipal.py`](./prepare_dataset/create_data_pipal.py) and run it: (Needs at least 16 GB RAM) <br/> 
 
       python3 prepare_dataset/create_data_pipal.py
+      
+We can not directly include spearman loss function to train the network, spearman's rank correlation coefficient formula is:
+<img src="https://latex.codecogs.com/gif.latex?Spearman(y,\hat{y})=1-\frac{6(\|rank(y)-rank(\hat{y})\|^2))}{d(d^2-1)}" /> 
+<br/>
+It is a non-differentiable function because of the ranking operation. Instead, we train a network to learn sorting the inputs and include this surrogate metric in the loss function:
+<br/>
+<img src="https://i.imgur.com/ZwLRyVX.png" /> 
 
+## Training Surrogate Ranking Model (Surrogate Spearman Loss Model)
+Set total number of training data in  [`train.py`](./ranking_model/train.py) and run it: (Default 2M data) <br/> 
 
+      python3 ranking_model/train.py
+
+(Optional) Now, you can run [`test.py`](./ranking_model/test.py) to see the diffrence in the surrogate spearman and the true spearman for some generated data:
+
+      python3 ranking_model/test.py
+
+Note that, the model input and output for the surrogate ranking model is $16$, which is same as the training batch size of the IQA model.
 
 
 ## References
