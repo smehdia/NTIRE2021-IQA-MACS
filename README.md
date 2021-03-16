@@ -27,7 +27,7 @@ We can not directly include spearman loss function to train the network, spearma
 <br/>
 It is a non-differentiable function because of the ranking operation. Instead, we train a network to learn sorting the inputs and include this surrogate metric in the loss function:
 <br/>
-<img src="https://i.imgur.com/ZwLRyVX.png" /> 
+<img src="https://i.imgur.com/Lxvv6Dh.png" /> 
 <br/>
 
 ## Training Surrogate Ranking Model (Surrogate Spearman Loss Model)
