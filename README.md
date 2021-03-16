@@ -9,10 +9,14 @@ Download datasets: <br/>
 [3] [PieAPP](https://web.ece.ucsb.edu/~ekta/projects/PieAPPv0.1/all_data_PieAPP_dataset_CVPR_2018.zip) (~2.2 GB) <br/>
 [4] PIPAL dataset <br/>
 <br/>
-Set datasets directories in [`create_data_pieapp_tid.py`](./prepare_dataset/create_data_pieapp_tid.py) and run [`create_data_pieapp_tid.py`](./prepare_dataset/create_data_pieapp_tid.py): <br/> 
+Please Make all the formats in the reference images of TID datasets in Upper Case (.BMP) (Typically I25 in the reference images has .bmp format instead of .BMP) <br/>
+Set datasets directories in [`create_data_pieapp_tid.py`](./prepare_dataset/create_data_pieapp_tid.py) and run it: <br/> 
 
       python3 prepare_dataset/create_data_pieapp_tid.py
 
+Set PIPAL dataset directory in [`create_data_pipal.py`](./prepare_dataset/create_data_pipal.py) and run it: <br/> 
+
+      python3 prepare_dataset/create_data_pipal.py
 
 
 
