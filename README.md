@@ -17,7 +17,7 @@ Set datasets directories in [`create_data_pieapp_tid.py`](./prepare_dataset/crea
 
       python3 prepare_dataset/create_data_pieapp_tid.py
 
-Set PIPAL dataset directory in [`create_data_pipal.py`](./prepare_dataset/create_data_pipal.py) and run it: <br/> 
+Set PIPAL dataset directory in [`create_data_pipal.py`](./prepare_dataset/create_data_pipal.py) and run it: (Needs at least 16 GB RAM) <br/> 
 
       python3 prepare_dataset/create_data_pipal.py
 
