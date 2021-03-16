@@ -3,6 +3,9 @@
 
 
 # Training Networks From Scratch
+
+## Preparing Datasets
+
 Download datasets: <br/>
 [1] [TID 2008 dataset](http://www.ponomarenko.info/tid2008/tid/tid2008.rar) (~550 MB) <br/>
 [2] [TID 2013 dataset](http://www.ponomarenko.info/tid2013/tid2013.rar) (~908 MB) <br/>
