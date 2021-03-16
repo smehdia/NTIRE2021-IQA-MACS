@@ -26,9 +26,9 @@ MEAN_PIE, STD_PIE = 0.47, 0.26
 MEAN_TID, STD_TID = 4.47, 1.30
 
 # PieAPP Dataset Directory
-PIEAPP_DIR = '/home/mehdi/Desktop/ntire/data/PieAPPdataset'
-TID2008_DIR = '/home/mehdi/Desktop/ntire/data/tid2008'
-TID2013_DIR = '/home/mehdi/Desktop/ntire/data/tid2013'
+PIEAPP_DIR = '../data/PieAPPdataset'
+TID2008_DIR = '../data/tid2008'
+TID2013_DIR = '../data/tid2013'
 
 
 def initialize_datasets():
@@ -104,7 +104,8 @@ def save_and_process_pieapp_dataset():
                 if len(scores) >= CHUNK_SIZE:
                     images = np.array(images)
                     scores = np.array(scores).reshape([-1, 1])
-                    images_train, images_val, y_train, y_val = train_test_split(images, scores, test_size=VALIDATION_RATIO)
+                    images_train, images_val, y_train, y_val = train_test_split(images, scores,
+                                                                                test_size=VALIDATION_RATIO)
                     write_in_file('data_train.h5', images_train, y_train)
                     write_in_file('data_val.h5', images_val, y_val)
                     images = []
