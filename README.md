@@ -9,8 +9,9 @@ Download datasets: <br/>
 [3] [PieAPP](https://web.ece.ucsb.edu/~ekta/projects/PieAPPv0.1/all_data_PieAPP_dataset_CVPR_2018.zip) (~2.2 GB) <br/>
 [4] PIPAL dataset <br/>
 <br/>
-Set datasets directories in [`create_data_pieapp_tid.py`](./prepare_dataset/create_data_pieapp_tid.py) and run [`create_data_pieapp_tid.py`](./prepare_dataset/create_data_pieapp_tid.py)
-   python3 prepare_dataset/create_data_pieapp_tid.py
+Set datasets directories in [`create_data_pieapp_tid.py`](./prepare_dataset/create_data_pieapp_tid.py) and run [`create_data_pieapp_tid.py`](./prepare_dataset/create_data_pieapp_tid.py): <br/> 
+
+      python3 prepare_dataset/create_data_pieapp_tid.py
 
 
 
