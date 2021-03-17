@@ -39,7 +39,11 @@ Set total number of training data in  [`train.py`](./ranking_model/train.py) and
 
       python3 ranking_model/test.py
 
-Note that, the model input and output for the surrogate ranking model is $16$, which is same as the training batch size of the IQA model.
+Note that, the model input and output for the surrogate ranking model is 16, which is same as the training batch size of the IQA model.
+
+## Pre-training Models on PieAPP and TID datasets 
+1) Uncomment 'first model pretraining **configs**' in [`train_simple.py`](./train_simple.py) and set  **use_pretrained_weights** to **False**
+2) Set **training_generator** and **validation_generator** as **DataGeneratorH5** and **DataGeneratorValH5**
 
 
 ## References
