@@ -45,6 +45,8 @@ Note that, the model input and output for the surrogate ranking model is 16, whi
 1) Uncomment 'first model pretraining **configs**' in [`train_simple.py`](./train_simple.py) and set  **use_pretrained_weights** to **False**
 2) Set **training_generator** and **validation_generator** as **DataGeneratorH5** and **DataGeneratorValH5**
 
+Model architecture 1:
+![Alt text](./figures/architecture_simple.png?raw=true "Proposed architecture 1")
 
 ## References
 [1] N. Ponomarenko, V. Lukin, A. Zelensky, K. Egiazarian, M. Carli, F. Battisti, "TID2008 - A Database for Evaluation of Full-Reference Visual Quality Assessment Metrics", Advances of Modern Radioelectronics, Vol. 10, pp. 30-45, 2009. <br/>
