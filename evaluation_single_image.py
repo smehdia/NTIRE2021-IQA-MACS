@@ -121,6 +121,7 @@ if __name__ == "__main__":
 
     agg_score = np.average(total_scores, axis=1)
 
+    plt.figure(figsize=(8, 4))
     plt.subplot('121')
     plt.title('Reference Image')
     plt.imshow(ref_img[:, :, ::-1])
