@@ -5,7 +5,7 @@
 [1] [Trained Models (tensorflow 2)](https://drive.google.com/file/d/1wh1Ln1ad4IiKVWOaL7Q59m-KyGC-vLio/view?usp=sharing) (~135 MB) <br/>
 2) Extract the **models.zip** file and put the models in **./models/**. 
 
-## Evaluate Trained Networks on Single Distorted and Reference Image 
+## Evaluattio of the Trained Networks on Single Distorted and Reference Image 
 1) Run [`evaluation_single_image.py`](./evaluation_single_image.py)
 
        python3 evaluation_single_image.py --ref ./test_images/ref.bmp --distorted ./test_images/dist.bmp
@@ -18,7 +18,7 @@ The output is:
 ![Alt text](./figures/result.png?raw=true "sample result") 
 <br/>
 
-## Evaluate Trained Networks on NTIRE Images 
+## Evaluation of the Trained Networks on NTIRE Images 
 1) Set the directories of the validation reference images and distorted images in [`evaluation_ntire.py`](./evaluation_ntire.py)
 2) Run [`evaluation_ntire.py`](./evaluation_ntire.py)
 
