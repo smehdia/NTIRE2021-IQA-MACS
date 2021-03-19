@@ -42,7 +42,7 @@ Set total number of training data in  [`train.py`](./ranking_model/train.py) and
 Note that, the model input and output for the surrogate ranking model is 16, which is same as the training batch size of the IQA model.
 
 ## Training Models (including pretraining models on PieAPP and TID datasets)
-1) Using the **configs** text files to train the models using [`train_simple.py`](./train_simple.py) for the basic model architecture, [`train_bn.py`](./train_bn.py) for the model architecture with batch normalization, [`train_attention.py`](./train_attention.py) for the model architecture with attention mechanism and residual blocks and [`train_tiled.py`](./train_tiled.py) for model architecture which splits the image into square tiles and pass them to a ConvLSTM2D layer. The model architectures are shown in the following figures:
+1) Use the **configs** text files to train the models using [`train_simple.py`](./train_simple.py) for the basic model architecture, [`train_bn.py`](./train_bn.py) for the model architecture with batch normalization, [`train_attention.py`](./train_attention.py) for the model architecture with attention mechanism and residual blocks and [`train_tiled.py`](./train_tiled.py) for model architecture which splits the image into square tiles and pass them to a ConvLSTM2D layer. The model architectures are shown in the following figures:
 Basic Model architecture:
 ![Alt text](./figures/architecture_simple.png?raw=true "Basic architecture")
 Model architecture with attention layer and residual blocks:
