@@ -47,7 +47,7 @@ Basic Model architecture:
 ![Alt text](./figures/architecture_simple.png?raw=true "Basic architecture")
 Model architecture with attention layer and residual blocks:
 ![Alt text](./figures/architecture_attention.png?raw=true "attention architecture")
-Model architecture with tiling the input and pass it to a ConvLSTM2D:
+Model architecture with tiling the input and passing it to a ConvLSTM2D:
 ![Alt text](./figures/architecture_convLSTM.png?raw=true "LSTM architecture")
 
 ## References
