@@ -1,5 +1,31 @@
 # NTIRE2021-IQA-MACS
 
+# Evaluation
+1) Download pretrained models from here:
+[1] [Trained Models (tensorflow 2)](https://drive.google.com/file/d/1wh1Ln1ad4IiKVWOaL7Q59m-KyGC-vLio/view?usp=sharing) (~135 MB) <br/>
+2) Extract the **models.zip** file and put the models in **./models/**. 
+
+## Evaluation of the Trained Networks on Single Distorted and Reference Image 
+1) Run [`evaluation_single_image.py`](./evaluation_single_image.py)
+
+       python3 evaluation_single_image.py --ref ./test_images/ref.bmp --distorted ./test_images/dist.bmp
+
+The output is:
+
+      -------------------------------------
+      Image Quality Score:  1381.0543870192307
+
+![Alt text](./figures/result.png?raw=true "sample result") 
+<br/>
+
+## Evaluation of the Trained Networks on NTIRE Images 
+1) Set the directories of the validation reference images and distorted images in [`evaluation_ntire.py`](./evaluation_ntire.py)
+2) Run [`evaluation_ntire.py`](./evaluation_ntire.py)
+
+       python3 evaluation_ntire.py
+       
+ The output scores will be logged in **output.txt**. 
+      
 
 
 # Training Networks From Scratch
