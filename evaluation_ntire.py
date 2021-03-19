@@ -46,28 +46,23 @@ if __name__ == "__main__":
     mu = 1449.05
     std = 121.35
 
+    f = open(LOG_FILE, "w")
+    intensity_scales = np.arange(0.1, 1.6, 0.1)
+    aug_list = ['0', '90', '180', '270', 'flip1', 'flip2', 'flip3']
+    for i in range(intensity_scales.shape[0]):
+        aug_list.extend(['intensity_' + str(round(intensity_scales[i], 2))])
     val_addresses = glob(DISTORTED_IMAGES_DIR + '/*' + IMG_FORMATS)
     val_addresses = sorted(val_addresses, key=lambda x: int(
         x.split('/')[-1].split('.')[0].split('_')[0][1::] + x.split('/')[-1].split('.')[0].split('_')[1] +
         x.split('/')[-1].split('.')[0].split('_')[2]))
 
 
-    models = []
+
     model_addresses = []
     for model_address in glob(MODELS_DIR + '/*.hdf5'):
-        model = load_model(model_address, compile=False, custom_objects={'tf':tf})
-        model.summary()
-        models.extend([model])
         model_addresses.extend([model_address])
 
-
-    f = open(LOG_FILE, "w")
-
-    intensity_scales = np.arange(0.1, 1.6, 0.1)
-
-    aug_list = ['0', '90', '180', '270', 'flip1', 'flip2', 'flip3']
-    for i in range(intensity_scales.shape[0]):
-        aug_list.extend(['intensity_' + str(round(intensity_scales[i], 2))])
+    total_scores = np.zeros(shape=(len(val_addresses), len(model_addresses)))
 
     x = np.zeros(shape=(len(aug_list) * len(val_addresses), 2, 288, 288, 3), dtype='uint8')
 
@@ -110,15 +105,13 @@ if __name__ == "__main__":
             counter += 1
 
 
-    total_scores = np.zeros(shape=(len(val_addresses), len(models)))
-    for i in tqdm(range(len(models))):
-        scores_models = models[i].predict([x[:, 0], x[:, 1]]) * std + mu
+    for i in tqdm(range(len(model_addresses))):
+        model = load_model(model_addresses[i], compile=False, custom_objects={'tf': tf})
+        scores_models = model.predict([x[:, 0], x[:, 1]]) * std + mu
         outs = scores_models
         outs = outs.reshape([-1])
         avg_score = avg(outs, len(aug_list))
         total_scores[:, i] = avg_score
-
-
 
 
     agg_score = np.average(total_scores, axis=1)
