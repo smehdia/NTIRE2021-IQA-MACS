@@ -1,11 +1,11 @@
 # NTIRE2021-IQA-MACS
 
-# Using of the trained models
+# Evaluation
 1) Download pretrained models from here:
 [1] [Trained Models (tensorflow 2)](https://drive.google.com/file/d/1wh1Ln1ad4IiKVWOaL7Q59m-KyGC-vLio/view?usp=sharing) (~135 MB) <br/>
 2) Extract the **models.zip** file and put the models in **./models/**. 
 
-## Evaluattio of the Trained Networks on Single Distorted and Reference Image 
+## Evaluation of the Trained Networks on Single Distorted and Reference Image 
 1) Run [`evaluation_single_image.py`](./evaluation_single_image.py)
 
        python3 evaluation_single_image.py --ref ./test_images/ref.bmp --distorted ./test_images/dist.bmp
