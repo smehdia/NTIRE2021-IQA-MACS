@@ -1,0 +1,40 @@
+
+*********************************************First model pretraining*************************************************************
+
+# First model pre training
+
+configs = {'MODEL_NAME': "./pretrained_models/model_tiled_pretrained_h5.hdf5", 'VALIDATION_RATIO': 0.2,
+#            'TOTAL_NUM_TRAINING': 65585, 'TOTAL_NUM_VALIDATION': 16397,
+#            'learning_rate': 1e-5, 'epochs': 16, 'batch_size': 16, 'alpha': 0.5,
+#            'nfs': [8, 16, 32, 64, 64, 64, 32, 16, 8, 32], 'kss': [5, 5, 3, 3],
+#            'dense_num': 32, 'l2_reg': [1e-6, 1e-4], 'mse_factor': 0.5, 'spearman_factor': 0.1,
+#            'num_channels': 3, 'learning_rate_drop': 0.1, 'drop_out': 0.0, 'drop_learning_rate_after_epochs': 10.0,
+#            'tile_size': 72, 'lstm_units': 32}
+
+# training_generator = DataGeneratorH5(configs['batch_size'])
+# validation_generator = DataGeneratorValH5(configs['batch_size'])
+#use_pretrained_weights = False
+
+*********************************************************************************************************************************
+
+*********************************************First model training****************************************************************
+
+configs = {'MODEL_NAME': "./models/model_tiled.hdf5", 'VALIDATION_RATIO': 0.2,
+           'TOTAL_NUM_TRAINING': 37120, 'TOTAL_NUM_VALIDATION': 9280,
+           'learning_rate': 1e-4, 'epochs': 30, 'batch_size': 16, 'alpha': 0.5,
+           'nfs': [8, 16, 32, 64, 64, 64, 32, 16, 8, 32], 'kss': [5, 5, 3, 3],
+           'dense_num': 32, 'l2_reg': [1e-6, 1e-4], 'mse_factor': 0.2, 'spearman_factor': 0.1,
+           'num_channels': 3, 'learning_rate_drop': 0.1, 'drop_out': 0.0, 'drop_learning_rate_after_epochs': 15.0,
+           'tile_size': 72, 'lstm_units': 32}
+# # PIPAL data generator
+# training_generator = DataGenerator(False, configs['batch_size'])
+# validation_generator = DataGenerator(True, configs['batch_size'])
+# pretrained_weights = './pretrained_models/model_tiled_pretrained_h5.hdf5'
+# use_pretrained_weights = True
+
+**********************************************************************************************************************************
+
+
+
+
+
