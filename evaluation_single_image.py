@@ -3,7 +3,9 @@ import imutils
 import argparse
 import numpy as np
 from glob import glob
+import matplotlib.pyplot as plt
 from metrics_losses.metrics_and_losses import *
+
 
 '''
 evaluate the image quality on a single image
@@ -118,5 +120,21 @@ if __name__ == "__main__":
         total_scores[:, i] = avg_score
 
     agg_score = np.average(total_scores, axis=1)
+
+    plt.subplot('121')
+    plt.title('Reference Image')
+    plt.imshow(ref_img[:, :, ::-1])
+    plt.axis('off')
+    plt.subplot('122')
+    plt.title('Distorted Image, IQA Score: {}'.format(format(round(float(agg_score[0]), 2))))
+    plt.imshow(distorted_img[:, :, ::-1])
+    plt.axis('off')
+    plt.savefig('result.png')
+
     print('-------------------------------------')
     print('Image Quality Score: ', agg_score[0])
+
+
+
+
+
