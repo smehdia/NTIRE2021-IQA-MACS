@@ -79,6 +79,20 @@ Model architecture with attention layer and residual blocks:
 Model architecture with tiling the input and passing it to a ConvLSTM2D:
 ![Alt text](./figures/architecture_convLSTM.png?raw=true "LSTM architecture")
 
+### Citation
+Kindly cite our paper upon using this repository:
+      @misc{ayyoubzadeh2021asna,
+      title={(ASNA) An Attention-based Siamese-Difference Neural Network with Surrogate Ranking Loss function for Perceptual Image Quality Assessment}, 
+      author={Seyed Mehdi Ayyoubzadeh and Ali Royat},
+      year={2021},
+      eprint={2105.02531},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+       }
+
+
+
+
 ### References
 [1] N. Ponomarenko, V. Lukin, A. Zelensky, K. Egiazarian, M. Carli, F. Battisti, "TID2008 - A Database for Evaluation of Full-Reference Visual Quality Assessment Metrics", Advances of Modern Radioelectronics, Vol. 10, pp. 30-45, 2009. <br/>
 [2] N. Ponomarenko, L. Jin, O. Ieremeiev, V. Lukin, K. Egiazarian, J. Astola, B. Vozel, K. Chehdi, M. Carli, F. Battisti, C.-C. Jay Kuo, Image database TID2013: Peculiarities, results and perspectives, Signal Processing: Image Communication, vol. 30, Jan. 2015, pp. 57-77. <br/>
