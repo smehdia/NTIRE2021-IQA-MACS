@@ -81,6 +81,7 @@ Model architecture with tiling the input and passing it to a ConvLSTM2D:
 
 ### Citation
 Kindly cite our paper upon using this repository:
+
       @misc{ayyoubzadeh2021asna,
       title={(ASNA) An Attention-based Siamese-Difference Neural Network with Surrogate Ranking Loss function for Perceptual Image Quality Assessment}, 
       author={Seyed Mehdi Ayyoubzadeh and Ali Royat},
