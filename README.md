@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Tensorflow](https://aleen42.github.io/badges/src/tensorflow.svg)](https://aleen42.github.io/badges/src/tensorflow.svg)     
 
-Pytorch version : https://github.com/AliRoyat/NTIRE2021-IQA-MACS-Pytorch#readme
+Pytorch Version : https://github.com/AliRoyat/NTIRE2021-IQA-MACS-Pytorch#readme
 
 ## Evaluation
 1) Download pretrained models from here:
