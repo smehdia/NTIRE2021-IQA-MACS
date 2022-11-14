@@ -1,7 +1,7 @@
 pandas==0.25.3
 tqdm==4.43.0
 imutils==0.5.3
-numpy==1.18.5
+numpy==1.22.2
 h5py==2.10.0
 opencv_python==4.5.1.48
 scipy==1.4.1
